@@ -1,0 +1,42 @@
+[submodule "vendor/symfony"]
+	path = vendor/symfony
+	url = http://github.com/symfony/symfony.git
+[submodule "vendor/twig"]
+	path = vendor/twig
+	url = http://github.com/fabpot/Twig.git
+[submodule "vendor/monolog"]
+	path = vendor/monolog
+	url = http://github.com/Seldaek/monolog.git
+[submodule "vendor/doctrine-common"]
+	path = vendor/doctrine-common
+	url = http://github.com/doctrine/common.git
+[submodule "vendor/doctrine-dbal"]
+	path = vendor/doctrine-dbal
+	url = http://github.com/doctrine/dbal.git
+[submodule "vendor/doctrine"]
+	path = vendor/doctrine
+	url = http://github.com/doctrine/doctrine2.git
+[submodule "vendor/swiftmailer"]
+	path = vendor/swiftmailer
+	url = http://github.com/swiftmailer/swiftmailer.git
+[submodule "vendor/assetic"]
+	path = vendor/assetic
+	url = http://github.com/kriswallsmith/assetic.git
+[submodule "vendor/twig-extensions"]
+	path = vendor/twig-extensions
+	url = http://github.com/fabpot/Twig-extensions.git
+[submodule "vendor/metadata"]
+	path = vendor/metadata
+	url = http://github.com/schmittjoh/metadata.git
+[submodule "vendor/bundles/Sensio/Bundle/FrameworkExtraBundle"]
+	path = vendor/bundles/Sensio/Bundle/FrameworkExtraBundle
+	url = http://github.com/sensio/SensioFrameworkExtraBundle.git
+[submodule "vendor/bundles/JMS/SecurityExtraBundle"]
+	path = vendor/bundles/JMS/SecurityExtraBundle
+	url = http://github.com/schmittjoh/JMSSecurityExtraBundle.git
+[submodule "vendor/bundles/Symfony/Bundle/AsseticBundle"]
+	path = vendor/bundles/Symfony/Bundle/AsseticBundle
+	url = http://github.com/symfony/AsseticBundle.git
+[submodule "vendor/gedmo-doctrine-extensions"]
+	path = vendor/gedmo-doctrine-extensions
+	url = http://github.com/l3pp4rd/DoctrineExtensions.git
