@@ -1,0 +1,270 @@
+body {
+  background: #fff url(../images/bg-header2.png) repeat-x;
+  color: #444;
+  font: 13px Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: none;
+}
+img.aleft {
+  float: left;
+  margin: 0 2px 2px 0;
+}
+h1, h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+h1 {
+  font-size: 150%;
+}
+h2 {
+  font-size: 140%;
+}
+h3, h4 {
+  font-size: 130%;
+}
+p, ul {
+  line-height: 1.4em;
+  margin: 1em 0 0.5em;
+}
+a {
+  color: #18479b;
+}
+a:hover {
+  text-decoration: none;
+}
+pre {
+  background-color: #F5F5F5;
+  margin: 0;
+  max-width: 600px;
+  overflow-x: auto;
+  padding: 0.7em 0 1.3em 1em;
+}
+.clear {
+  clear: both;
+}
+
+#header {
+  margin: 0px auto;
+  height: 169px;
+  width: 940px;
+  position: relative;
+}
+
+#head-top {
+  padding: 30px 0 0 0;
+}
+
+span.main-title {
+  color: #fff;
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1.page-title {
+  color: #fff;
+  margin: 0;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#menu {
+    position: absolute;
+    bottom: 0;
+    right: -1px
+}
+
+#menu ol {
+  list-style: none;
+  margin: 0;
+}
+
+#menu li {
+  display: inline;
+}
+
+#menu a {
+  display: block;
+  float: left;
+  margin-left: 5px;
+  padding: 5px 15px;
+  background: #f0f0f0;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-top: 2px solid #d5d5d5;
+  font-weight: bold;
+  font-size: 11px;
+  color: #333;
+}
+
+#menu a:hover, #menu .active a {
+  text-decoration: underline;
+}
+
+#out-container {
+  background: #fff url(../images/bg-content.png) repeat-x;
+}
+
+#inner-container {
+  margin: 0px auto;
+  padding: 0;
+  width: 930px;
+}
+
+#main-content {
+  float: left;
+  margin-bottom: 50px;
+  padding: 10px 0 0;
+  width: 580px;
+}
+
+/* Sidebar */
+#right-col {
+  float: right;
+  width: 300px;
+  margin: 20px 0 20px;
+}
+
+#right-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#right-col h4:first-child {
+  margin: 0 0 5px;
+}
+#right-col h4 {
+  border-bottom: 1px dashed #888;
+  margin: 25px 0 5px;
+  padding-bottom: 5px;
+}
+
+#right-col a {
+  text-decoration: none;
+}
+
+#right-col a:hover {
+  text-decoration: underline;
+}
+
+#footer {
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  clear: both;
+  text-align: center;
+  font-size: 10px;
+  color: #707070;
+  background: #041325;
+}
+
+#footer a {
+  text-decoration: none;
+  font-size: 11px;
+  border-bottom: 1px dotted #939393;
+  text-decoration: none;
+  color: #a0a0a0;
+}
+.article-title {
+  color: #333;
+  margin: 0;
+  padding: 10px 0 0;
+}
+.article-title a {
+  color: #333;
+}
+.article-title a:hover {
+  text-decoration: underline;
+}
+.article-summary {
+  margin: 8px 0 4px;
+}
+.article-byline {
+  color: #797B7A;
+  font-size: 90%;
+}
+.article-readmore {
+  display: block;
+}
+.article-readmore a {
+  text-decoration: none;
+}
+.article-readmore a:hover {
+  text-decoration: underline;
+}
+.article-subtitle {
+  text-align: center;
+  font-style: italic;
+}
+.article-separator {
+  border-top: 1px solid #f0f0f0;
+  width: 95%;
+  height: 5px;
+}
+/* Archive */
+ul.archive-list li.month {
+  padding-left: 10px;
+}
+ul.months {
+  padding: 0;
+  margin: 0;
+}
+ul.error_list {
+  margin: 0;
+  padding: 0;
+}
+ul.error_list li {
+  list-style-type:none;
+  color: #ff0000;
+}
+/* Latest news */
+ul.latest-list li {
+  margin: 0 0 5px;
+}
+ul.latest-list li span.date {
+  color: #797B7A;
+  font-size: 85%;
+  line-height: 13px;
+  display: block;
+}
+.feed-subscribe {
+  margin-top: 10px;
+  font-size: 90%;
+}
+.feed-subscribe a {
+  display: block;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  background: url('../images/feed-icon.png') no-repeat 0 50%;
+}
+#right-ad {
+    margin-top: 15px;
+}
+#right-ad span {
+    display: block;
+}
+#right-ad .twitter {
+    float: left;
+    margin-right: 20px;
+}
+/* Registration form */
+#registration-form {
+  margin-top: 15px;
+}
+#registration-form ul {
+  margin: 0;
+  padding: 0;
+}
+#registration-form li {
+  list-style-type: none;
+}
+#registration-form label {
+  display: block;
+}

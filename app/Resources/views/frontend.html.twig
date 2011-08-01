@@ -1,0 +1,35 @@
+{% extends "::base.html.twig" %}
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" />
+{% endblock %}
+{% block body %}
+    <div id="header">
+        <div id="head-top">
+            <span class="main-title">Lyra cms</span>
+            <h1 class="page-title">Cms developed with symfony framework</h1>
+        </div>
+        <div id="menu">
+            {% render 'LyraContentBundle:Main:navigation' with {'parent' : null, 'depth': 1, 'addParent' : true} %}
+        </div>
+    </div>
+    <div id="out-container">
+        <div id="inner-container">
+            <div id="main-content">
+                {% block content %}{% endblock %}
+            </div>
+            <div id="right-col">
+                <div id="right-ad">
+                    <span class="twitter"><a href="http://www.twitter.com/mgiagnoni"><img src="http://twitter-badges.s3.amazonaws.com/follow_me-b.png" alt="Follow mgiagnoni on Twitter"/></a></span>
+                    <span class="p-one"><g:plusone href="http://www.lyra-cms.com/"></g:plusone></span>
+                </div>
+            </div>
+            <div class="clear">&nbsp;</div>
+        </div>
+    </div>
+    <div id="footer">
+        &copy;2011 Lyra CMS. All Rights Reserved.
+        &nbsp;
+        <a href="http://validator.w3.org/check/referer">Valid XHTML</a> &nbsp;
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+    </div>
+{% endblock body %}
