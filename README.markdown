@@ -49,9 +49,9 @@ need to make all the changes needed by their OS.
 
 5.  Customize configuration parameters
 
-        cp app/config/parameters.ini.dist app/config/parameters.ini
+        cp app/config/parameters.yml.dist app/config/parameters.yml
 
-    Edit `app/config/parameters.ini` and enter values for *database_host*,
+    Edit `app/config/parameters.yml` and enter values for *database_host*,
     *database_name*, *database_user*, and *database_password* parameters to
     connect to a database you have previously created.
 
