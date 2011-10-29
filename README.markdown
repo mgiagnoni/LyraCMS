@@ -45,7 +45,7 @@ need to make all the changes needed by their OS.
 
 4.  Build bootstrap cache
 
-        php bin/build_bootsrap.php
+        php bin/build_bootstrap.php
 
 5.  Customize configuration parameters
 
