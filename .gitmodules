@@ -43,3 +43,6 @@
 [submodule "vendor/bundles/Lyra/ContentBundle"]
 	path = vendor/bundles/Lyra/ContentBundle
 	url = git://github.com/mgiagnoni/LyraContentBundle.git
+[submodule "vendor/bundles/Lyra/AdminBundle"]
+	path = vendor/bundles/Lyra/AdminBundle
+	url = git://github.com/mgiagnoni/LyraAdminBundle.git
