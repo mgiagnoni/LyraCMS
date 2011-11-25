@@ -1,0 +1,16 @@
+{% extends app.request.isXmlHttpRequest ? 'LyraAdminBundle:Admin:form_ajax.html.twig' : 'LyraAdminBundle:Admin:form.html.twig' %}
+{% block form_title %}
+<h1>{{ 'form.move.title'|trans({}, 'LyraContentBundle') }}</h1>
+{% endblock %}
+{% block button_bar %}{% endblock %}
+{% block form %}
+    <p>{{ 'form.move.confirmation'|trans({'%content%': content.title}, 'LyraContentBundle') }}</p>
+    {{ form_errors(form) }}
+    <form class="ly-form" action="{{ path('lyra_admin_node_move', { 'id': content.id }) }}" method="post">
+        {{ form_row(form.parent) }}
+        {{ form_rest(form) }}
+        <hr class="clear" />
+        <input type="submit" name="submit" value="{{ 'form.move.submit'|trans({}, 'LyraContentBundle') }}" />
+        <a href="{{ path('lyra_admin_node_index') }}">{{ 'form.move.cancel'|trans({}, 'LyraContentBundle') }}</a>
+    </form>
+{% endblock %}

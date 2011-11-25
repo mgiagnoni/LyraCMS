@@ -1,0 +1,7 @@
+{% extends 'LyraAdminBundle:Admin:form.html.twig' %}
+{% block form_actions %}
+    <div class="form-actions">
+        <a class="button ui-icon-arrowthick-1-w action-back" href="{{ path('lyra_admin_node_index') }}">{{ 'form.action.back'|trans({}, 'LyraAdminBundle') }}</a>
+    </div>
+{% endblock %}
+

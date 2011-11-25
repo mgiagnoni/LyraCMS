@@ -1,0 +1,13 @@
+/* List columns */
+th.col-order {
+    width: 8em;
+}
+/* Move node dialog box */
+.ly-form li {
+    list-style: none;
+    margin: 0;
+}
+.ly-form label {
+    display: inline-block;
+    padding-right: 5px;
+}

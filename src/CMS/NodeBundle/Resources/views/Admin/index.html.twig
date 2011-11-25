@@ -1,0 +1,16 @@
+{% extends 'LyraAdminBundle:Admin:index.html.twig' %}
+{% block list_actions %}
+    <div class="list-actions">
+        <a href="{{ path('lyra_admin_page_new') }}" class="button action-new ui-icon-document">{{ 'list.new'|trans({}, 'LyraContentBundle') }}</a>
+    </div>
+{% endblock %}
+{% block table_object_actions %}
+<a href="{{ path('lyra_admin_page_edit', { 'id' : object.itemId }) }}" class="button action-edit icon-only ui-icon-pencil">{{ 'list.edit'|trans({}, 'LyraContentBundle') }}</a>
+{% if not object.isRoot %}
+<a href="{{ path('lyra_admin_node_delete', { 'id' : object.id }) }}" class="button action-delete icon-only ui-icon-trash">{{ 'list.delete'|trans({}, 'LyraContentBundle') }}</a>
+{% endif %}
+{% endblock %}
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/cmsnode/css/admin.css') }}" />
+{% endblock %}

@@ -2,6 +2,7 @@
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
-
+lyra_admin:
+    resource: "@LyraAdminBundle/Resources/config/routing.yml"
 lyra_content_frontend:
     resource: "@LyraContentBundle/Resources/config/routing/frontend.xml"

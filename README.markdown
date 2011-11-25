@@ -89,7 +89,9 @@ need to make all the changes needed by their OS.
 
 10.  Access site
 
-    http://localhost:8080/app.php/ (frontend)
+    http://localhost:8080/app.php/
 
     You can create content directly from the home page (link *Create page*
-    on the right column). 
+    on the right column). Or you can access the backend area at
+
+    http://localhost:8080/app.php/admin/content/list

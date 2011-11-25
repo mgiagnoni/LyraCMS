@@ -63,3 +63,50 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+# LyraAdminBundle configuration
+lyra_admin:
+    theme: ui-lightness
+    models:
+        node:
+            class: 'Lyra\ContentBundle\Entity\Node'
+            controller: 'CMSNodeBundle:Admin'
+            route_pattern_prefix: 'content'
+            actions:
+                move:
+                    route_pattern: '{id}/move'
+            fields:
+                published:
+                    get_method: isPublished
+            list:
+                default_sort:
+                    field: lft
+                    order: asc
+                template: 'CMSNodeBundle:Admin:index.html.twig'
+                title: Contents
+                columns:
+                    order:
+                        template: 'CMSNodeBundle:Admin:order.html.twig'
+                        sortable: false
+                    title:
+                        format_function: 'CMS\NodeBundle\Util\Util::formatNode'
+                        sortable: false
+                    published:
+                        sortable: false
+                batch_actions: []
+        page:
+            class: 'CMS\PageBundle\Entity\Page'
+            controller: 'CMSPageBundle:Admin'
+            form:
+                class: Lyra\ContentBundle\Form\PageFormType
+                template: 'CMSPageBundle:Admin:form.html.twig'
+                groups:
+                    node:
+                        embed: node
+                        fields: [parent,title,link_title,path,published]
+                    content:
+                        fields: [content]
+                        break_after: true
+                    meta_tags:
+                        caption: Meta tags
+                        fields: [metaTitle,metaDescription,metaKeywords]
