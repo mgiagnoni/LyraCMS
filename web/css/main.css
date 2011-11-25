@@ -268,3 +268,9 @@ ul.latest-list li span.date {
 #registration-form label {
   display: block;
 }
+/* Form */
+.content-form label {
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+}

@@ -3,9 +3,5 @@
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
 
-lyra_content_backend:
-    resource: "@LyraContentBundle/Resources/config/routing/backend.xml"
-    prefix: /admin
-
 lyra_content_frontend:
     resource: "@LyraContentBundle/Resources/config/routing/frontend.xml"
