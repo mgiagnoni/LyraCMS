@@ -50,7 +50,7 @@ class AdminController extends BaseController
         return $this->container->get('templating')
             ->renderResponse('LyraAdminBundle:Admin:delete.html.twig', array(
                 'object' => $node,
-                'form' => $form->createView(),
+                'csrf' => $this->container->get('form.csrf_provider')->generateCsrfToken('delete'),
                 'renderer' => $renderer
             ));
     }

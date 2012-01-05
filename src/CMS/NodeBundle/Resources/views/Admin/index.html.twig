@@ -7,7 +7,7 @@
 {% block table_object_actions %}
 <a href="{{ path('lyra_admin_page_edit', { 'id' : object.itemId }) }}" class="button action-edit icon-only ui-icon-pencil">{{ 'list.edit'|trans({}, 'LyraContentBundle') }}</a>
 {% if not object.isRoot %}
-<a href="{{ path('lyra_admin_node_delete', { 'id' : object.id }) }}" class="button action-delete icon-only ui-icon-trash">{{ 'list.delete'|trans({}, 'LyraContentBundle') }}</a>
+<a href="{{ path('lyra_admin_node_delete', { 'id' : object.id }) }}" class="button action-delete dialog icon-only ui-icon-trash">{{ 'list.delete'|trans({}, 'LyraContentBundle') }}</a>
 {% endif %}
 {% endblock %}
 {% block stylesheets %}

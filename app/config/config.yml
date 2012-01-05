@@ -72,6 +72,7 @@ lyra_admin:
             class: 'Lyra\ContentBundle\Entity\Node'
             controller: 'CMSNodeBundle:Admin'
             route_pattern_prefix: 'content'
+            title: 'Contents'
             actions:
                 move:
                     route_pattern: '{id}/move'
@@ -97,6 +98,7 @@ lyra_admin:
         page:
             class: 'CMS\PageBundle\Entity\Page'
             controller: 'CMSPageBundle:Admin'
+            title: false
             form:
                 class: Lyra\ContentBundle\Form\PageFormType
                 template: 'CMSPageBundle:Admin:form.html.twig'
