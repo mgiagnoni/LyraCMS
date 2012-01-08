@@ -43,11 +43,7 @@ need to make all the changes needed by their OS.
         chmod 777 app/cache -R
         chmod 777 app/logs -R
 
-4.  Build bootstrap cache
-
-        php bin/build_bootstrap.php
-
-5.  Customize configuration parameters
+4.  Customize configuration parameters
 
         cp app/config/parameters.yml.dist app/config/parameters.yml
 
@@ -55,21 +51,21 @@ need to make all the changes needed by their OS.
     *database_name*, *database_user*, and *database_password* parameters to
     connect to a database you have previously created.
 
-6.  Create database tables
+5.  Create database tables
 
         php app/console doctrine:schema:update --force
 
-7.  Install assets
+6.  Install assets
 
         php app/console assets:install web
 
-8.  Create content root node
+7.  Create content root node
 
     The content root node (homepage) must be created with a shell command
 
         php app/console lyra:content:init
 
-9.  Configure virtual host
+8.  Configure virtual host
 
     Create an Apache *virtual host* having the `web` directory of your
     project as **Document Root**, for example
@@ -87,7 +83,7 @@ need to make all the changes needed by their OS.
 
     Restart Apache to load this configuration.
 
-10.  Access site
+9.  Access site
 
     http://localhost:8080/app.php/
 
