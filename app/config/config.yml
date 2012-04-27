@@ -74,6 +74,12 @@ lyra_admin:
             route_pattern_prefix: 'content'
             title: 'Contents'
             actions:
+                new:
+                    template: 'CMSNodeBundle:Admin:action_new.html.twig'
+                edit:
+                    template: 'CMSNodeBundle:Admin:action_edit.html.twig'
+                delete:
+                    template: 'CMSNodeBundle:Admin:action_delete.html.twig'
                 move:
                     route_pattern: '{id}/move'
             fields:
@@ -95,6 +101,7 @@ lyra_admin:
                     published:
                         sortable: false
                 batch_actions: []
+                object_actions: [edit,delete]
         page:
             class: 'CMS\PageBundle\Entity\Page'
             controller: 'CMSPageBundle:Admin'

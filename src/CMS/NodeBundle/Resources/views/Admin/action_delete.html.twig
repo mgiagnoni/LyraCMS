@@ -1,0 +1,3 @@
+{% if not object.isRoot %}
+<a href="{{ path('lyra_admin_node_delete', { 'id' : object.id }) }}" class="button action-delete {{ attrs.icon ? ' ui-icon-'~attrs.icon : '' }}{{ attrs.dialog is defined ? ' dialog' : ''}}{{ attrs.style is defined ? ' '~attrs.style  : '' }}">{{ 'list.delete'|trans({}, 'LyraContentBundle') }}</a>
+{% endif %}

@@ -1,5 +1,5 @@
-{% extends app.request.isXmlHttpRequest ? 'LyraAdminBundle:Admin:form_ajax.html.twig' : 'LyraAdminBundle:Admin:form.html.twig' %}
-{% block form_title %}
+{% extends app.request.isXmlHttpRequest ? 'LyraAdminBundle:Dialog:ajax.html.twig' : 'LyraAdminBundle:Dialog:base.html.twig' %}
+{% block dialog_title %}
 <h1>{{ 'form.move.title'|trans({}, 'LyraContentBundle') }}</h1>
 {% endblock %}
 {% block button_bar %}{% endblock %}

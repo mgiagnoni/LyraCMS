@@ -48,7 +48,7 @@ class AdminController extends BaseController
         $renderer->setRouteParams(array('id' => $node->getId()));
 
         return $this->container->get('templating')
-            ->renderResponse('LyraAdminBundle:Admin:delete.html.twig', array(
+            ->renderResponse('LyraAdminBundle:Dialog:delete.html.twig', array(
                 'object' => $node,
                 'csrf' => $this->container->get('form.csrf_provider')->generateCsrfToken('delete'),
                 'renderer' => $renderer
