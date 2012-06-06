@@ -82,6 +82,8 @@ lyra_admin:
                     template: 'CMSNodeBundle:Admin:action_delete.html.twig'
                 move:
                     route_pattern: '{id}/move'
+                movedown: ~
+                moveup: ~
             fields:
                 published:
                     get_method: isPublished

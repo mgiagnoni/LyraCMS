@@ -23,15 +23,12 @@ class AdminController extends BaseController
         $page = $this->container->get('lyra_content.page_manager')
             ->createPage();
 
-        $form = $this->getFormRenderer()->getForm($page);
+        $form = $this->getForm($page);
 
-        $request = $this->container->get('request');
-        if ('POST' == $request->getMethod()) {
-            $form->bindRequest($request);
+        if ($form->handleRequest($this->getRequest())) {
+            $this->container->get('lyra_content.page_manager')->savePage($page);
 
-            if ($form->isValid() && $this->container->get('lyra_content.page_manager')->savePage($page)) {
-                return $this->getRedirectToListResponse();
-            }
+            return $this->getRedirectToListResponse();
         }
 
         return $this->getRenderFormResponse($form);
@@ -39,10 +36,8 @@ class AdminController extends BaseController
 
     protected function getRedirectToListResponse()
     {
-        $renderer = $this->getListRenderer('node');
-
         return new RedirectResponse(
-            $this->container->get('router')->generate($renderer->getRoutePrefix().'_index')
+            $this->container->get('router')->generate($this->getActions('node')->get('index')->getRouteName())
         );
     }
 }

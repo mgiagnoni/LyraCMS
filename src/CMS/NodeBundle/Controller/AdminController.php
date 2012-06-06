@@ -32,11 +32,6 @@ class AdminController extends BaseController
             throw new HttpException(403, 'Root node cannot be deleted.');
         }
 
-        $form = $this->container->get('form.factory')
-            ->createBuilder('form')
-            ->getForm();
-
-        $children = $manager->findNodeDescendants($node);
         if ('POST' === $this->container->get('request')->getMethod()) {
             $manager->removeNode($node);
             $this->setFlash('lyra_content success', 'flash.delete.success');
@@ -44,14 +39,14 @@ class AdminController extends BaseController
             return $this->getRedirectToListResponse();
         }
 
-        $renderer = $this->getDialogRenderer();
-        $renderer->setRouteParams(array('id' => $node->getId()));
+        $actions = $this->getActions();
 
         return $this->container->get('templating')
             ->renderResponse('LyraAdminBundle:Dialog:delete.html.twig', array(
                 'object' => $node,
                 'csrf' => $this->container->get('form.csrf_provider')->generateCsrfToken('delete'),
-                'renderer' => $renderer
+                'action' => $actions->get('delete'),
+                'cancel' => $actions->get('index')
             ));
     }
 
@@ -80,14 +75,10 @@ class AdminController extends BaseController
             }
         }
 
-        $renderer = $this->getDialogRenderer();
-        $renderer->setRouteParams(array('id' => $node->getId()));
-
         return $this->container->get('templating')
             ->renderResponse('CMSNodeBundle:Admin:move.html.twig', array(
                 'form' => $form->createView(),
                 'content' => $node,
-                'renderer' => $renderer
             ));
     }
 
