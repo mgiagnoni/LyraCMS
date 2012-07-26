@@ -16,8 +16,8 @@ need to make all the changes needed by their OS.
         curl -s http://getcomposer.org/installer | php
         php composer.phar create-project lyra/cms-application path/to/install
 
-`path/to/install` is the path to the folder where Lyra CMS application will be
-installed; it must not exist because it will be created by Composer.
+    `path/to/install` is the path to the folder where Lyra CMS application will be
+    installed; it must not exist because it will be created by Composer.
 
 2.  Customize configuration parameters
 
@@ -40,7 +40,7 @@ installed; it must not exist because it will be created by Composer.
 
         php app/console lyra:content:init
 
-8.  Configure virtual host
+6.  Configure virtual host
 
     The `web` directory of your project must be configured as web server
     **Document Root**. Here is an example of a configuration of an Apache
@@ -59,7 +59,7 @@ installed; it must not exist because it will be created by Composer.
 
     `path/to/install` is the path used at step 1. Restart Apache to load this configuration.
 
-9.  Access site
+7.  Access site
 
     http://localhost:8080/app.php/
 
