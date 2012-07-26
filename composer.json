@@ -1,0 +1,43 @@
+{
+    "name": "lyra/cms-application",
+    "description": "A CMS developed with Symfony2 and Doctrine2",
+    "keywords": ["cms", "content management", "symfony", "doctrine"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Massimo Giagnoni",
+            "email": "gimassimo@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.1.0-BETA4",
+        "doctrine/orm": ">=2.2,<2.4-dev",
+        "doctrine/doctrine-bundle": "dev-master",
+        "twig/extensions": "dev-master",
+        "symfony/assetic-bundle": "dev-master",
+        "symfony/swiftmailer-bundle": "dev-master",
+        "symfony/monolog-bundle": "2.1.0-BETA4",
+        "sensio/distribution-bundle": "dev-master",
+        "sensio/framework-extra-bundle": "dev-master",
+        "jms/security-extra-bundle": "1.1.*",
+        "lyra/admin-bundle": "dev-master",
+        "lyra/content-bundle": "dev-master"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+        ],
+        "post-update-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+        ]
+    },
+    "minimum-stability": "dev"
+}
