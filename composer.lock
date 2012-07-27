@@ -66,8 +66,8 @@
         {
             "package": "lyra/content-bundle",
             "version": "dev-master",
-            "source-reference": "e9f249f2520c32bd10869e7a21417ad126067c79",
-            "commit-date": "1343305298"
+            "source-reference": "7b3433cf12d6780af283dca7b231e90ab547f5ce",
+            "commit-date": "1343348183"
         },
         {
             "package": "monolog/monolog",
@@ -78,12 +78,6 @@
             "version": "dev-master",
             "source-reference": "5886adae1613c0a72fbb95259a83ae798e86c0d3",
             "commit-date": "1342347850"
-        },
-        {
-            "package": "sensio/framework-extra-bundle",
-            "version": "dev-master",
-            "alias-pretty-version": "2.1.x-dev",
-            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "sensio/framework-extra-bundle",
